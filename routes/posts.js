@@ -24,8 +24,17 @@ router.post('/', (req, res) => {
     .catch(err => {
         res.status(404)
     })
-    
-    // const post = {}
+})
+
+//Get post by id 
+
+router.get('/:postId', async (req, res) => {
+    try {
+        res.json(await Post.findById(req.params.postId))
+    } catch (error) {
+        res.json({ message: error })
+        
+    }
 })
 
 
