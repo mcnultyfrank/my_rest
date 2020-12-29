@@ -31,8 +31,8 @@ router.post('/', (req, res) => {
 router.get('/:postId', async (req, res) => {
     try {
         res.json(await Post.findById(req.params.postId))
-    } catch (error) {
-        res.json({ message: error })
+    } catch (err) {
+        res.json({ message: err })
         
     }
 })
