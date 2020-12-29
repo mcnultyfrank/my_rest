@@ -27,7 +27,6 @@ router.post('/', (req, res) => {
 })
 
 //Get post by id 
-
 router.get('/:postId', async (req, res) => {
     try {
         res.json(await Post.findById(req.params.postId))
@@ -36,6 +35,19 @@ router.get('/:postId', async (req, res) => {
         
     }
 })
+
+// delete post
+router.delete('/:postId', async (req, res) => {
+    try {
+        res.json(await Post.remove( {_id: req.params.postId }))
+    } catch (error) {
+        res.json({ message: err })
+    }
+})
+
+
+
+
 
 
 module.exports = router;
