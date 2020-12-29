@@ -1,3 +1,3 @@
 # my_rest
 
-My rest API, working progress
+Rest API with vaccine facts, for those misinformed anti vaxxers!
