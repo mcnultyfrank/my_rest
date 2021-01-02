@@ -9,9 +9,12 @@ require('dotenv/config')
 app.use(bodyParser.json())
 app.use(cors())
 
+
+
 // importing routes
 
 const postRoute = require('./routes/posts');
+
 
 app.use('/posts', postRoute);
 app.get('/', (req, res) => {
@@ -24,7 +27,6 @@ mongoose.connect(process.env.DB_CONNECTION,
         console.log('connected to db')
     });
     
-
 app.listen(3000);
 
 
