@@ -9,8 +9,6 @@ require('dotenv/config')
 app.use(bodyParser.json())
 app.use(cors())
 
-
-
 // importing routes
 
 const postRoute = require('./routes/posts');
